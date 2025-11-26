@@ -1,6 +1,12 @@
 import React from 'react';
 import { WebView } from 'react-native-webview';
-import { View, StyleSheet, ImageBackground, Image } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ImageBackground,
+  Image,
+  Platform,
+} from 'react-native';
 import WinnetaGolfDiscoveryLayout from './WinnetaGolfDiscoveryLayout';
 
 const WinnetaGolfDiscoveryLoader = () => {
@@ -115,10 +121,17 @@ const WinnetaGolfDiscoveryLoader = () => {
   return (
     <WinnetaGolfDiscoveryLayout>
       <View style={styles.winnetagolfcont}>
-        <Image
-          source={require('../../assets/images/winnetagolfldr.png')}
-          style={{ bottom: 45 }}
-        />
+        {Platform.OS === 'ios' ? (
+          <Image
+            source={require('../../assets/images/winnetagolfldr.png')}
+            style={{ bottom: 45 }}
+          />
+        ) : (
+          <Image
+            source={require('../../assets/images/andrlogo.png')}
+            style={{ bottom: 45, width: 350, height: 350, borderRadius: 22 }}
+          />
+        )}
       </View>
 
       <View style={styles.winnetagolfwrap}>

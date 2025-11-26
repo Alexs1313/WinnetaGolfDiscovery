@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 51,
     borderRadius: 16,
-    paddingHorizontal: 14,
+    paddingHorizontal: 1,
     borderTopColor: 'transparent',
     borderTopWidth: 1,
   },
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   winnetaGolfLabel: {
-    fontSize: 10,
+    fontSize: 8,
   },
 });
 
